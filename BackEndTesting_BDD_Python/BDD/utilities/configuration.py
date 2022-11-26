@@ -5,4 +5,4 @@ def getConfig():
     return config
 
 def getPassword():
-    return "revu@7976"
+    return "12346677"
