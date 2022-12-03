@@ -1,0 +1,29 @@
+code python.py
+% code python.py
+% ls
+BDD             python          python.py
+% mkdir cs50_new 
+ % cp python.py code.py
+% code code.py
+ % ls
+BDD             code.py         cs50_new        python          python.py
+ % mv python.py code.py
+ % rm code.py 
+ % ls -a
+.               ..              BDD             cs50_new        python
+% code notes.txt
+% cd cs50_new
+% code myFiles.txt
+% mv myfiles.py ..
+mv: rename myfiles.py to ../myfiles.py: No such file or directory
+% mv myFiles.py ..
+mv: rename myFiles.py to ../myFiles.py: No such file or directory
+% mv myFiles.txt ..
+mv: rename myFiles.txt to ../myFiles.txt: No such file or directory
+% cd ..   
+ % rm cs50_new
+rm: cs50_new: is a directory
+ % rm cs50_new
+rm: cs50_new: is a directory
+% rmdir cs50_new
+% 
