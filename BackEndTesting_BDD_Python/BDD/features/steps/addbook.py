@@ -1,7 +1,7 @@
 import requests
 from behave import *
 from utilities.payload import *
-from utilities.resources import * 
+from utilities.resources import *
 from utilities.configuration import *
 
 
@@ -10,12 +10,12 @@ def step_impl(context):
     #
     context.url = getConfig()['API']['endpoint'] + ApiResources.addBook
     context.headers = {"Content-Type": "application/json"}
-    context.payLoad = addBookPayload("manfdfppt","4373");
+    context.payLoad = addBookPayload("gdyf", "437");
 
 
 @when('we execute the AddBook PostAPI method')
 def step_impl(context):
-    context.response = requests.post(context.url, json=context.payLoad , headers=context.headers, )
+    context.response = requests.post(context.url, json=context.payLoad, headers=context.headers, )
 
 
 @then('book is successfully added')
@@ -28,7 +28,7 @@ def step_impl(context):
 
 
 @given('the Book details with {isbn} and {aisle}')
-def step_impl(context,isbn,aisle):
+def step_impl(context, isbn, aisle):
     context.url = getConfig()['API']['endpoint'] + ApiResources.addBook
     context.headers = {"Content-Type": "application/json"}
     context.payLoad = addBookPayload(isbn, aisle);
@@ -36,7 +36,6 @@ def step_impl(context,isbn,aisle):
 
 @given('I have github auth credentials')
 def step_impl(context):
-
     context.se = requests.session()
     context.se.auth = auth = ('rahulshettyacademy', getPassword())
 
@@ -47,6 +46,6 @@ def step_impl(context):
 
 
 @then(u'status code of response should be {statusCode:d}')
-def step_impl(context,statusCode):
+def step_impl(context, statusCode):
     print(context.response.status_code)
     assert context.response.status_code == statusCode

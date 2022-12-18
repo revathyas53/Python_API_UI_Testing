@@ -1,5 +1,6 @@
 import mysql.connector
 #host, database, user,password
+#mysql -u root -p
 conn = mysql.connector.connect(host='localhost', database='APIDevelop', user='root', password='Nandhu155')
 print(conn.is_connected())
 cursor = conn.cursor()

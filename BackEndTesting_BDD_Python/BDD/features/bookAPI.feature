@@ -15,5 +15,5 @@ Feature: Verify if Books are added and deleted using Library API
     Then book is successfully added
       Examples:
         |isbn  |  aisle |
-        | fdfee| 8948   |
-        | powr | 76333  |
+        | 'xyz' | 8234  |
+        | 'pfds' | 76  |

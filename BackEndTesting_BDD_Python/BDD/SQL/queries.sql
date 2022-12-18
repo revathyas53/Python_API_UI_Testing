@@ -1,4 +1,3 @@
-CREATE DATABASE PythonAutomation;
 CREATE DATABASE APIDevelop;
 use APIDevelop;
 CREATE TABLE CustomerInfo

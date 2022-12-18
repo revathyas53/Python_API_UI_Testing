@@ -11,7 +11,7 @@ url=getConfig()['API']['endpoint']
 
 
 print ("**** ADD BOOK ****")
-addBook_response=requests.post(url+ApiResources.addBook, json=addPayload("099"), headers=header)
+addBook_response=requests.post(url+ApiResources.addBook, json=addBookPayload("099"), headers=header)
 res_addbook_json= addBook_response.json()
 print(res_addbook_json)
 book_id = res_addbook_json['ID']
