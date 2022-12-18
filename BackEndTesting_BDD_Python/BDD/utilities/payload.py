@@ -1,4 +1,4 @@
-def addPayload(isbn):
+def addBookPayload(isbn):
     body = {
     "name": "BDD using Python",
     "isbn": isbn,
